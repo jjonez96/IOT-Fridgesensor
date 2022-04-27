@@ -1,12 +1,18 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import TicketTable from "./TicketTable";
+import Light from "./Light";
+import Temperature from "./Temperature";
+import Status from "./Status";
+import Header from "./Header";
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <TicketTable />
+      {props.isLoading && <p>Loading...</p>}
+      <Header />
+      <Temperature />
+      <Light />
+      <Status />
     </div>
   );
 }
