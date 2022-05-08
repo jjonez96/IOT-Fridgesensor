@@ -2,36 +2,31 @@ import React, { useState, useEffect } from "react";
 
 const Status = (props) => {
   const [temp, setTemp] = useState([]);
-
   useEffect(() => {
-    const interval = setInterval(() => {
-      fetch(
-        "/api/v1/process/read/nx4mmAV8Cx8AkO1AVQk437?datanodes=Device_Online/online01",
-        {
-          method: "get",
-          headers: new Headers({
-            Authorization:
-              "Basic " + btoa("e2102779@vamk.fi:HennajaJoona123456"),
-            "Content-Type": "application/json",
-          }),
+    fetch(
+      "/api/v1/process/read/nx4mmAV8Cx8AkO1AVQk437?datanodes=Device_Online/online01",
+      {
+        method: "get",
+        headers: new Headers({
+          Authorization: "Basic " + btoa("e2102779@vamk.fi:HennajaJoona123456"),
+          "Content-Type": "application/json",
+        }),
+      }
+    )
+      .then(function (response) {
+        if (response.status !== 200) {
+          console.log(
+            "Looks like there was a problem. Status Code: " + response.status
+          );
+          return;
         }
-      )
-        .then(function (response) {
-          if (response.status !== 200) {
-            console.log(
-              "Looks like there was a problem. Status Code: " + response.status
-            );
-            return;
-          }
-          response.json().then(function (data) {
-            setTemp(data.datanodeReads);
-          });
-        })
-        .catch(function (err) {
-          console.log("Fetch Error : ", err);
+        response.json().then(function (data) {
+          setTemp(data.datanodeReads);
         });
-    }, 3000);
-    return () => clearInterval(interval);
+      })
+      .catch(function (err) {
+        console.log("Fetch Error : ", err);
+      });
   }, []);
   const data = temp.map((value, key) => {
     return (

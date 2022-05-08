@@ -5,10 +5,9 @@ import Temperature from "./Temperature";
 import Status from "./Status";
 import Header from "./Header";
 
-function App(props) {
+function App() {
   return (
     <div className="App">
-      {props.isLoading && <p>Loading...</p>}
       <Header />
       <Temperature />
       <Light />
