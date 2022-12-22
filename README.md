@@ -1,5 +1,5 @@
 # IOT Fridgesensor
-IOT application for medical use. You can watch the medicines temperature and the app sends a message to user if temperature goes too high or too low.
+IOT application for health care clinics or in the food industry. In health clinics lots of medical equipment need cold-storage and they are stored in fridges. Also the cafeteria or other food industry places need freezers and fridges to store food equipment which needs specific store conditions. In this app you can watch the medical equipment or food temperature and the app sends a message to user if temperature goes too high or too low.
  <br>
 <b>Preview:</b> <br>
 https://iotgreenteam.netlify.app <br>  <br>
