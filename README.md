@@ -2,7 +2,7 @@
 IOT application for medical use. You can watch the medicines temperature and the app sends a message to user if temperature goes too high or too low.
  <br>
 <b>Preview:</b> <br>
-https://iotgreenteam.netlify.app/  <br>  <br>
+https://iotgreenteam.netlify.app <br>  <br>
 ![Näyttökuva 2022-12-22 164808](https://user-images.githubusercontent.com/90967564/209160961-6bf7f3a4-332b-4b54-a1be-cffa41adf810.png)
 
 ## Tech Stack: 
