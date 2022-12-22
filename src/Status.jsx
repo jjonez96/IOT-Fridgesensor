@@ -8,7 +8,7 @@ const Status = (props) => {
       {
         method: "get",
         headers: new Headers({
-          Authorization: "Basic " + btoa("e2102779@vamk.fi:HennajaJoona123456"),
+          Authorization: "Basic " + btoa("authkey"),
           "Content-Type": "application/json",
         }),
       }
